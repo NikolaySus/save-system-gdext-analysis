@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvy34k01crhue"]
+
+[ext_resource type="Script" uid="uid://0dk0badi8173" path="res://scenes/start_menu/button.gd" id="1_ann76"]
+[ext_resource type="Script" uid="uid://dyoq3o8dwlq7j" path="res://scenes/start_menu/line_edit.gd" id="3_0qglm"]
+[ext_resource type="Script" uid="uid://cbvg8njkhqofy" path="res://scenes/start_menu/option_button.gd" id="3_d2snp"]
+[ext_resource type="Script" uid="uid://ds6xbmw2y4v4p" path="res://scenes/start_menu/h_box_container_3.gd" id="3_q7uhq"]
+[ext_resource type="Script" uid="uid://dfvqsygiwqd47" path="res://scenes/start_menu/option_button_2.gd" id="4_d2snp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Press to start:"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "START"
+script = ExtResource("1_ann76")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Type benchmark end tick, non positive to disable benchmark:"
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+script = ExtResource("3_0qglm")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("3_q7uhq")
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Choose the direction of automove in benchmark:"
+
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+script = ExtResource("3_d2snp")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Choose save method (my save system or naive realisation):"
+
+[node name="OptionButton2" type="OptionButton" parent="CenterContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Extension"
+popup/item_0/id = 0
+popup/item_1/text = "Naive"
+popup/item_1/id = 1
+script = ExtResource("4_d2snp")

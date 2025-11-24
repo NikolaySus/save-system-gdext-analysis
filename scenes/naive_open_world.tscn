@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpp7hy7tv8ohp"]
+
+[ext_resource type="PackedScene" uid="uid://buhqqbti67g4p" path="res://scenes/mc/mc.tscn" id="1_u04nl"]
+[ext_resource type="Script" uid="uid://bvut6ou426es8" path="res://scenes/naive_open_world.gd" id="1_wxwnn"]
+[ext_resource type="TileSet" uid="uid://b2n5n5pvsqsp4" path="res://scenes/open_world_ground.tres" id="3_pjlst"]
+
+[node name="NaiveOpenWorld" type="Node2D"]
+script = ExtResource("1_wxwnn")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_u04nl")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
+tile_set = ExtResource("3_pjlst")
