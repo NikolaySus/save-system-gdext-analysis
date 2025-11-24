@@ -1,0 +1,1 @@
+Код библиотеки находится в открытом доступе по адресу: https://github.com/NikolaySus/save-system-gdext
